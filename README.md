@@ -1,0 +1,2 @@
+batch-archetype
+===============
