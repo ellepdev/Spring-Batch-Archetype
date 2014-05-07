@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:env.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<context:annotation-config />
+	<!-- Define Base Package -->
+	<context:component-scan base-package="" />
+
+	<!-- IMPORTS -->
+	<!-- Default Archetype Imports -->
+	<import resource="classpath:db-beans.xml" />
+	<import resource="classpath:service-beans.xml" />
+	<import resource="classpath:batch-beans.xml" />
+	<import resource="classpath:scheduler-beans.xml" />
+	<import resource="classpath:jobs/*.xml" />
+</beans>

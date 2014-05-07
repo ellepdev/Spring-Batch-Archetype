@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="batch-archetype">
+	<fileSets>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/assembly</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/main/java</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources</directory>
+			<includes>
+				<include>**/batch-beans.xml</include>
+				<include>**/init-context.xml</include>
+				<include>**/db-beans.xml</include>
+				<include>**/service-beans.xml</include>
+				<include>**/scheduler-beans.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters</directory>
+		</fileSet>
+		
+		<!-- SVIL -->
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/svil</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/svil/bin</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/svil/config</directory>
+			<includes>
+				<include>**/env.properties</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/prod</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/prod/bin</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/prod/config</directory>
+			<includes>
+				<include>**/env.properties</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/coll</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/coll/bin</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/coll/config</directory>
+			<includes>
+				<include>**/env.properties</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/manu</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/manu/bin</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/filters/manu/config</directory>
+			<includes>
+				<include>**/env.properties</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources/jobs</directory>
+		</fileSet>
+		
+		<fileSet filtered="true" packaged="true">
+			<directory>src/test/java</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/test/resources</directory>
+		</fileSet>
+	</fileSets>
+</archetype-descriptor>
